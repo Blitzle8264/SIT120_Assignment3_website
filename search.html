@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <!--Loading vue for later use-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Bite-Sized Library </title>
+
+  <header>
+    <!--Logo image linking back to homepage-->
+    <center><a href="#"><img src="https://blitzle8264.github.io/SIT120_Task_Submissions/bookshelf.jpg" width="80%" height="150px%"></img></a></center>
+  </header>
+
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <div id="myTopnav" class="topnav">
+    <a href="#Popular">Popular</a>
+    <a href="#bookshelf">Your Bookshelf</a>
+    <!-- additional code to form drop down menus in nav bar -->
+    <div class="dropdown">
+      <button class="dropbtn">Forms
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Drabble</a>
+        <a href="#">Sonnet</a>
+        <a href="#">Haiku</a>
+        <a href="#">Short Narrative</a>
+        <a href="#">Other</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Tags
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Seasonal</a>
+        <a href="#">Scenic</a>
+        <a href="#">Romantic</a>
+        <a href="#">Sad</a>
+        <a href="#">Other</a>
+      </div>
+    </div>
+    <!--Button to take user to a random work on the site - not implemented yet-->
+    <a href="#random">Random Work</a>
+    <a href="#log" onclick="loginWindow()">Login/Register</a>
+    <a href="#search">Search</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+      <div id="app">
+      <h2>Sign up</h2>
+      <input type="text" v-model.lazy="message" placeholder="Enter Username">
+      <p> Username: {{message}}</p>
+    
+    <br><br>
+          <input type="text" v-model.lazy="email" placeholder="Enter email">
+      <p> email: {{email}}</p>
+      <br><br><br>
+      <input type="text" v-model.lazy="message2" placeholder="Enter Password">
+      <p>Password must contain at least 8 letters, 2 numbers and a special character.</p>
+      <p> Password: {{message2}}</p>
+        
+            <input type="radio" v-model="pick" v-bind:value="a">
+    <span>Recieve email updates?: {{pick}}</span>
+        <br><br>
+        <button class="button">Sign up</button>
+  </div>
+
+</body>
+
+</html>
